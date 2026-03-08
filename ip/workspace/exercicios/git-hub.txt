@@ -1,0 +1,32 @@
+entro na pasta ads
+cd Desktop
+cd ads
+ou
+cd Desktop/ads
+
+git init - para iniciar o projeto dentro do do GitHub
+Mas na seugnda vez não é necessário pois já criei meu projeto dentro do GitHub
+
+git remote add origin e o seu https - use o https não ssh por enquanto
+
+git status para entender o que está acontecendo
+
+git add . - para preparar os arquivos se você usar apenas "add ." fará com todos da pasta
+
+"git add ip/" se fosse para uma só pasta
+
+Adicionando minhas variáveis no pc para validar meu acesso dentro do GitHub
+git config --global user.email "carlosgmarin749@gmail.com"
+git config --global user.name "Carlos Marin"
+
+
+git commit -m "add workspace folder" - Serve para explicar o que foi feito
+
+git branch -M main - você aqui está criando a linha de desenvolvimento independente chamada main sua brunch.
+
+git push -u origin main - aqui você está enviando a main para dentro do GitHub
+
+
+git add . 
+git commit -m "aqui vai a explicação do que você fez"
+git push - aqui é para subir tudo que precisa
