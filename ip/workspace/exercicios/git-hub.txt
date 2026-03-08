@@ -28,5 +28,10 @@ git push -u origin main - aqui você está enviando a main para dentro do GitHub
 
 
 git add . 
-git commit -m "aqui vai a explicação do que você fez"
+git commit -m "descrição"
 git push - aqui é para subir tudo que precisa
+
+git clone https://github.com/carlosguimarin/ads.git
+para clonar o que está no GitHub
+
+git pull - apenas para quando tem mais de uma branch
