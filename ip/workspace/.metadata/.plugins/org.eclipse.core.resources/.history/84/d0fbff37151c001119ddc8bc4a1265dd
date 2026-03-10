@@ -1,0 +1,10 @@
+package exemplos;
+
+public class Conditional_Switch_Case {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
