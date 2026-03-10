@@ -35,3 +35,39 @@ git clone https://github.com/carlosguimarin/ads.git
 para clonar o que está no GitHub
 
 git pull - apenas para quando tem mais de uma branch
+
+
+
+Arquivo .gitignore
+
+# Ignorar pastas de configuração do Eclipse
+.metadata/
+.recommenders/
+.settings/
+.project
+.classpath
+
+# Ignorar pastas de arquivos compilados
+bin/
+
+# Ignorar arquivos de log e temporários
+*.log
+
+
+
+caso já tenha criado o repositório e subido todos os arquivos precisa limpar eles nas suas pastas específicas com os comandos seguintes
+
+
+# Remove a pasta de metadados do Workspace (se estiver nela)
+git rm -r --cached .metadata
+
+# Remove as configurações do Eclipse
+git rm -r --cached .settings
+git rm --cached .project
+git rm --cached .classpath
+
+# Remove a pasta de arquivos compilados
+git rm -r --cached bin
+
+# Remove arquivos de log que possam ter subido
+git rm --cached *.log
