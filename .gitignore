@@ -1,0 +1,12 @@
+# Ignorar pastas de configuração do Eclipse
+.metadata/
+.recommenders/
+.settings/
+.project
+.classpath
+
+# Ignorar pastas de arquivos compilados
+bin/
+
+# Ignorar arquivos de log e temporários
+*.log
