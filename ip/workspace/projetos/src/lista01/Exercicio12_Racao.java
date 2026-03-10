@@ -2,7 +2,7 @@ package lista01;
 
 import java.util.Scanner;
 
-public class Exercicio12 {
+public class Exercicio12_Racao {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

@@ -2,7 +2,7 @@ package lista01;
 
 import java.util.Scanner;
 
-public class Exercicio11 {
+public class Exercicio11_Media_Ponderada {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

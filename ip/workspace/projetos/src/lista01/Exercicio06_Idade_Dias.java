@@ -2,7 +2,7 @@ package lista01;
 
 import java.util.Scanner;
 
-public class Exercicio06 {
+public class Exercicio06_Idade_Dias {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
