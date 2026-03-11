@@ -1,19 +1,35 @@
 package lista02;
 
-import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Exercicio05 {
+public class Exercicio05_MediaEstoque {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		DecimalFormat formatador = new DecimalFormat("0.00");
 		Scanner teclado = new Scanner(System.in);
 		
+		System.out.print("Informe a quantidade atual de produtos: ");
+		int atualProdutos = teclado.nextInt();
 		
+		System.out.print("Informe a quantidade mínima de produtos: ");
+		int minimaEstoque = teclado.nextInt();
+		
+		System.out.print("Informe a quantidade máxima de produtos: ");
+		int maximaEstoque = teclado.nextInt();
+		
+		int mediaProdutos = ((maximaEstoque + minimaEstoque) / 2);
+		
+		if (atualProdutos >= mediaProdutos) {
+			System.out.println("Não é necessário efetuar a compra deste produto.");
+		} else {
+			if (atualProdutos < mediaProdutos) {
+				System.out.println("Efetuar a compra deste produto.");
+			}
+		}
 		
 		teclado.close();
+		
 		/*
 		 * FAÇA UM PROGRAMA PARA LER A QUANTIDADE ATUAL DE UM PRODUTO EM ESTOQUE. TAMBÉM DEVERÁ SER
 		 * INFORMADO A QUANTIDADE MÁXIMA E A QUANTIDADE MÍNIMA QUE ESTE PRODUTO PODE TER EM ESTOQUE. O
