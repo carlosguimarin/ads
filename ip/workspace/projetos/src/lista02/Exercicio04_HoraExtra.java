@@ -3,7 +3,7 @@ package lista02;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Exercicio04 {
+public class Exercicio04_HoraExtra {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -11,24 +11,30 @@ public class Exercicio04 {
 		DecimalFormat formatador = new DecimalFormat("0.00");
 		Scanner teclado = new Scanner(System.in);
 		
-		System.out.println("Digite o seu salário por hora: " );
+		System.out.print("Digite o seu salário por hora: " );
 		double salarioHora = teclado.nextDouble();
 		
 		System.out.print("Digite o número de horas contabilizadas no mês: ");
 		int horasMes = teclado.nextInt();
 		
 		System.out.print("Digite a sobra em minutos no mês: ");
-		int minutosMes = teclado.nextInt();
+		double minutosMes = teclado.nextDouble();
 		
-		if (horasMes > 160) {
-			System.out.println("O total que você deverá receber é R$ ");
+		if (horasMes >= 160) {
+			System.out.println("O total que você deverá receber é R$ " 
+			+ formatador.format(
+					((salarioHora * 160)
+					+ ((horasMes - 160) * (salarioHora * 1.5)))
+					+ ((minutosMes / 60) * (salarioHora * 1.50))));
+		
+		} else {
+			if (horasMes < 160) {
+			System.out.println("O total que você deverá receber é R$ " 
+			+ formatador.format(
+					(salarioHora * horasMes) 
+					+ ((minutosMes / 60) * (salarioHora * 1.50))));
 		}
-		
-//		salario total
-//		+ horas extras
-//		1 mês tem 28 dias 4 semanas
-		
-		
+				
 		teclado.close();
 		
 		/*
@@ -39,6 +45,8 @@ public class Exercicio04 {
 		 * TENHAM SIDO TRABALHADAS (CONSIDERE QUE O MÊS POSSUA 4 SEMANAS EXATAS).
 		 */
 
+		}
+	
 	}
-
+	
 }
