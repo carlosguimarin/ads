@@ -39,6 +39,24 @@ public class Exercicio07_PostoGasolina {
 			}
 		}
 		
+//		if (combustivel.equals("A")) {
+//
+//		    if (litrosAbastecidos <= 20) {
+//		        System.out.println("Total a pagar: R$ " + formatador.format((litrosAbastecidos * alcool) * 0.97));
+//		    } else {
+//		        System.out.println("Total a pagar: R$ " + formatador.format((litrosAbastecidos * alcool) * 0.95));
+//		    }
+//
+//		} else if (combustivel.equals("G")) {
+//
+//		    if (litrosAbastecidos <= 20) {
+//		        System.out.println("Total a pagar: R$ " + formatador.format((litrosAbastecidos * gasolina) * 0.96));
+//		    } else {
+//		        System.out.println("Total a pagar: R$ " + formatador.format((litrosAbastecidos * gasolina) * 0.94));
+//		    }
+//
+//		}
+		
 		teclado.close();
 		
 		/*

@@ -29,6 +29,21 @@ public class Exercicio08_LoginSenha {
 			System.out.println("USUÁRIO INVÁLIDO!");
 		}
 		
+//		if (usuario == 12345) {
+//
+//		    System.out.print("Senha: ");
+//		    int senha = teclado.nextInt();
+//
+//		    if (senha == 54321) {
+//		        System.out.println("ACESSO PERMITIDO!");
+//		    } else {
+//		        System.out.println("SENHA INCORRETA!");
+//		    }
+//
+//		} else {
+//		    System.out.println("USUÁRIO INVÁLIDO!");
+//		}
+		
 		teclado.close();
 		
 		/*
