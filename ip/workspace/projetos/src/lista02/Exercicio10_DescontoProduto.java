@@ -37,9 +37,10 @@ public class Exercicio10_DescontoProduto {
 			desconto = (quantidade * precoUnitario) - totalPagar;
 		}
 		
+		System.out.println("Produto comprado: " + nomeProduto);
 		System.out.println("Você recebeu R$ " 
 		+ formatador.format(desconto) 
-		+ " de desconto e o total a pagar ficou R$ " 
+		+ " de desconto e o total a pagar é R$ " 
 		+ formatador.format(totalPagar) + ".");
 		
 		
