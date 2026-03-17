@@ -1,15 +1,17 @@
 package lista03;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Exercício04_ {
+public class Exercício04_ImcSemPeso {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+		DecimalFormat formatador = new DecimalFormat("0.00");
 		Scanner teclado = new Scanner(System.in);
 		
-		System.out.print("Digite seu sexo: ");
+		System.out.print("Digite seu sexo com M para Masculino ou F para Feminino: ");
 		String sexo = teclado.nextLine();
 		
 		System.out.print("Digite sua altura: ");
@@ -18,9 +20,16 @@ public class Exercício04_ {
 		double homemPeso = (72.7 * altura) - 58;
 		double mulherPeso = (62.1 * altura) - 44.7;
 		
-		if (sexo == "Homem" || sexo == "Masculino") {
-			System.out.println("O peso ideal deve ser " + (homemPeso) + " kg");
-		} else if (sexo == "Mulher" || sexo == "Feminino") {
+		switch(sexo) {
+			case "M": {
+				System.out.println("O peso ideal deve ser " + formatador.format(homemPeso) + " kg");
+				break;
+			}
+			case "F": {
+				System.out.println("O peso ideal deve ser " + formatador.format(mulherPeso) + " kg");
+				break;
+			}
+		}
 		
 		teclado.close();
 		
