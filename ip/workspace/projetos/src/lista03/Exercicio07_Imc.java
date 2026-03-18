@@ -2,7 +2,7 @@ package lista03;
 
 import java.util.Scanner;
 
-public class Exercicio07_ImcComPeso {
+public class Exercicio07_Imc {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

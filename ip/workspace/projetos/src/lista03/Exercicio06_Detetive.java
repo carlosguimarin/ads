@@ -1,6 +1,5 @@
 package lista03;
 
-import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Exercicio06_Detetive {
@@ -8,7 +7,7 @@ public class Exercicio06_Detetive {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		DecimalFormat formatador = new DecimalFormat("0.00");
+		
 		Scanner teclado = new Scanner(System.in);
 		
 		System.out.println("CONSIDERE SIM OU NAO PARA AS PERGUNTAS A SEGUIR:");
