@@ -3,7 +3,7 @@ package lista03;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Exercicio04_Imc {
+public class Exercicio04_ImcSemPeso {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
