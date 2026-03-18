@@ -11,40 +11,45 @@ public class Exercicio08_ContaAgua {
 		DecimalFormat formatador = new DecimalFormat("0.00");
 		Scanner teclado = new Scanner(System.in);
 		
+		System.out.print("Digite se o endereço é Residencial ou Predial: ");
+		String tipoEndereco = teclado.nextLine();
+		
 		System.out.print("Digite a leitura do mês corrente em m³: ");
 		int mesAtual = teclado.nextInt();
 		
 		System.out.print("Digite a leitura do mês passado em m³: ");
 		int mesPassado = teclado.nextInt();
 		
-		System.out.print("Digite se o endereço é Residencial ou Predial: ");
-		String tipoEndereco = teclado.nextLine();
+		int consumo = mesAtual - mesPassado;
 		
+		double valorMetro = 0;
 		double taxaMinima = 35;
 		double taxaEsgoto = 35;
-		double valorMetro = 0;
 		
-		double valorAgua = ((mesAtual - mesPassado) * valorMetro) + (taxaMinima + taxaEsgoto);
+		switch(tipoEndereco) {
+			case "Residencial": {
+				if (consumo < 10) {
+					valorMetro = 1;
+			} else if (consumo >= 10 && consumo <= 25) {
+				valorMetro = 2.50;
+			} else if (consumo > 25) {
+				valorMetro = 4.25;
+			}
+			break;
+		}
 		
-		if ((mesAtual - mesPassado) < 10 && tipoEndereco == "Residencial") {
-			valorMetro = 1;
-		} else if ((mesAtual - mesPassado) >= 10 && (mesAtual - mesPassado) <= 25  && tipoEndereco == "Residencial") {
-			valorMetro = 2.50;			
-		} else if ((mesAtual - mesPassado) > 25 && tipoEndereco == "Residencial") {
-			valorMetro = 4.25;
-		} else {
-			if ((mesAtual - mesPassado) < 10 && tipoEndereco == "Predial") {
-				valorMetro = 1.30;
-			} else if ((mesAtual - mesPassado) >= 10 && (mesAtual - mesPassado) <= 25  && tipoEndereco == "Predial") {
-				valorMetro = 2.90;			
-			} else if ((mesAtual - mesPassado) > 25 && tipoEndereco == "Predial") {
-				valorMetro = 4.50;
+			case "Predial": {
+				if (consumo < 10) {
+					valorMetro = 1.30;
+				} else if (consumo >= 10 && consumo <= 25) {
+					valorMetro = 2.90;
+				} else if (consumo > 25) {
+					valorMetro = 4.50;
+				}
 			}
 		}
 		
-		System.out.println("Você gastou em água R$ " + valorAgua);		
-		
-		//		leitura atual - leitura anterior
+		System.out.println("Você gastou em água R$ " + formatador.format((consumo * valorMetro) + (taxaMinima + taxaEsgoto)));
 		
 		teclado.close();
 		

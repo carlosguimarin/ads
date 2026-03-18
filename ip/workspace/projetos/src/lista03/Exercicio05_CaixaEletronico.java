@@ -9,26 +9,44 @@ public class Exercicio05_CaixaEletronico {
 		
 		Scanner teclado = new Scanner(System.in);
 		
-		System.out.println("Informe o valor que deseja sacar: ");
-		double valorSaque = teclado.nextDouble();
+		System.out.print("Informe o valor que deseja sacar: ");
+		int valor = teclado.nextInt();
 		
-		int umReal = 1;
-		int cincoReais = 5;
-		int dezReais = 10;
-		int cinquentaReais = 50;
-		int cemReais = 100;
+		if (valor < 10 || valor > 1000) {
+			System.out.println("Valor inválido. Mínimo: 10 | Máximo: 1000");
+		} else {
+			
+			int notas100 = valor / 100;
+			valor = valor % 100;
+			
+			int notas50 = valor / 50;
+			valor = valor % 50;
+			
+			int notas10 = valor / 10;
+			valor = valor % 10;
+			
+			int notas5 = valor / 5;
+			valor = valor % 5;
+			
+			int notas1 = valor / 1;
 		
-		if (valorSaque <= 10)
-		
-//		1
-//		5
-//		10
-//		50
-//		100
-//		
-//		10
-//		1000
-		
+		if (notas100 > 0) {
+			System.out.println("Notas de 100: " + notas100);
+		}
+		if (notas50 > 0) {
+			System.out.println("Notas de 50: " + notas50);
+		}
+		if (notas10 > 0) {
+			System.out.println("Notas de 10: " + notas10);
+		}
+		if (notas5 > 0) {
+			System.out.println("Notas de 5: " + notas5);
+		}
+		if (notas1 > 0) {
+			System.out.println("Notas de 1: " + notas1);
+		}
+						
+		}
 		
 		teclado.close();
 		
