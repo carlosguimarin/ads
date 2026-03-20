@@ -49,7 +49,9 @@ public class Exercicio08_ContaAgua {
 			}
 		}
 		
-		System.out.println("Você gastou em água R$ " + formatador.format((consumo * valorMetro) + (taxaMinima + taxaEsgoto)));
+		System.out.println("Você gastou em água R$ " 
+				+ formatador.format((consumo * valorMetro)
+				+ (taxaMinima + taxaEsgoto)));
 		
 		teclado.close();
 		
