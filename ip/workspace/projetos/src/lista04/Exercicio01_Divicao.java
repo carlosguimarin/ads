@@ -3,7 +3,7 @@ package lista04;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 
-public class Exercicio01_ {
+public class Exercicio01_Divicao {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
